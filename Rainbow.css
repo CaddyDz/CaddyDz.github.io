@@ -11,3 +11,9 @@ html {
 		font-family: Helvetica, Arial, Sans-serif;
 		font-size: 14px;
 	}
+	h1 {
+		padding: 0px;
+		margin: 20px 0px 0px 0px;
+		text-align: center;
+		font-weight: normal;
+	}
