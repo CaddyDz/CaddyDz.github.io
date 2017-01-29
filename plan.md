@@ -12,3 +12,5 @@ Color theme: Orange and white
 3- List of projects  
 4- List of qualifications/skills  
 5- Contact section
+### Working on
+1- Navigation bar
