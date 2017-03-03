@@ -14,3 +14,9 @@ Color theme: Orange and white
 5- Contact section
 ### Working on
 1- Navigation bar
+
+
+### CSS to write
+kali.org
+modify gitter
+redirect liveedu

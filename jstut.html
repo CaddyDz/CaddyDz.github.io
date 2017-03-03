@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="jstut.js"></script>
+    <style type="text/css">
+    body{font-size: 1.6em;}
+    .hidden{display: none;}
+    .show{display: inline !important;}
+    button{
+      border: 2px solid black; background: #E5E4E2;
+      font-size: .5em; font-weight: bold;color: black;
+      padding: .8em 2em;
+      margin-top: .4em;
+    }
+    </style>
+
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <script type="text/javascript">
+
+    var randStr = "A long " + "string that " + "goes on and on";
+
+    document.write("String Length ", randStr.length + "<br>");
+    document.write("Index of \"goes\" ", randStr.indexOf("goes"),"<br>")
+    </script>
+  </body>
+</html>
