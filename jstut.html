@@ -19,11 +19,17 @@
   <body>
     <p id="sayHello"></p>
     <script type="text/javascript">
-
-    var randStr = "A long " + "string that " + "goes on and on";
-
-    document.write("String Length ", randStr.length + "<br>");
-    document.write("Index of \"goes\" ", randStr.indexOf("goes"),"<br>")
+    var strToStyle = "Random String";
+    document.write("Big : ", strToStyle.big(), "<br>");
+    document.write("Bold : ", strToStyle.bold(), "<br>");
+    document.write("Font Color : ", strToStyle.fontcolor("blue"), "<br>");
+    document.write("Font Size : ", strToStyle.fontsize("8em"), "<br>");
+    document.write("Italics : ", strToStyle.italics(), "<br>");
+    document.write("Google : ", strToStyle.link("http://google.com"), "<br>");
+    document.write("Small : ", strToStyle.small(), "<br>");
+    document.write("Strike : ", strToStyle.strike(), "<br>");
+    document.write("Sub : ", strToStyle.sub(), "<br>");
+    document.write("Sup : ", strToStyle.sup(), "<br>");
     </script>
   </body>
 </html>
