@@ -19,17 +19,20 @@
   <body>
     <p id="sayHello"></p>
     <script type="text/javascript">
-    var strToStyle = "Random String";
-    document.write("Big : ", strToStyle.big(), "<br>");
-    document.write("Bold : ", strToStyle.bold(), "<br>");
-    document.write("Font Color : ", strToStyle.fontcolor("blue"), "<br>");
-    document.write("Font Size : ", strToStyle.fontsize("8em"), "<br>");
-    document.write("Italics : ", strToStyle.italics(), "<br>");
-    document.write("Google : ", strToStyle.link("http://google.com"), "<br>");
-    document.write("Small : ", strToStyle.small(), "<br>");
-    document.write("Strike : ", strToStyle.strike(), "<br>");
-    document.write("Sub : ", strToStyle.sub(), "<br>");
-    document.write("Sup : ", strToStyle.sup(), "<br>");
+      var age = 8;
+      if ((age >= 5) && (age <=6)) {
+        document.write("Go to Kindergarten" + "<br>");
+      } else if(age > 18){
+        document.write("Go to College" + "<br>");
+      } else {
+        document.write("Go to Grade ", age - 5, "<br>");
+      }
+      document.write("true || false ", true || false, "<br>");
+      document.write("!true ", !true, "<br>");
+      document.write("\"5\" == 5 = ", ("5" == 5), "<br>");
+      document.write("\"5\" === 5 = ", ("5" === 5), "<br>");
+      document.write("5 === 5 = ", (5 === 5), "<br>");
+      document.write("\"5\" === \"5\" = ", ("5" === "5"), "<br>");
     </script>
   </body>
 </html>
