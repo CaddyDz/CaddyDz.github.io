@@ -1,4 +1,5 @@
-var age = 6;
-// Ternary operator
-var canIVote = (age >= 18) ? true : false;
-document.write(canIVote);
+var i = 1;
+while (i <= 10) {
+  document.write(i + "<br>");
+  i++;
+}
