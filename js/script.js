@@ -1,4 +1,3 @@
-var customer = {name: "Salim", address: "Algeria", balance: 50.50,};
-for (k in customer) {
-  document.write(customer[k] + "<br>");
-}
+var tomSmith = ["Tom Smith", "123 Main St", 120.50];
+
+document.write("1st Index is ", tomSmith[0] + "<br>");
