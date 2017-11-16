@@ -8,12 +8,15 @@
   </head>
   <body>
     <div id="root">
-      <h2>{{ greet('evening') }}</h2>
-      <p>Name: {{ name }}</p>
-      <p>Job: {{ job }}</p>
-      <a v-bind:href="website">Caddy</a>
-      <input type="text" :value="name">
-      <p v-html="websiteTag"></p>
+      <h1>Events</h1>
+      <p>{{ age }}</p>
+      <button type="button" name="button" v-on:click="add(1)">Add</button>
+      <button type="button" name="button" v-on:click="substract(1)">Substract</button>
+      <button type="button" name="button" @click="add(10)">Add 10</button>
+      <button type="button" name="button" @click="add(10)">Subtract 10</button><br>
+      <div id="canvas" @mousemove="updateXY">
+        {{ x }}, {{ y }}
+      </div>
     </div>
     <script src="app.js" charset="utf-8"></script>    
   </body>
