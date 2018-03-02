@@ -7,18 +7,13 @@
     <script src="vue.js" charset="utf-8"></script>
   </head>
   <body>
-    <div id="root">
-      <h1>Events</h1>
-      <p>{{ age }}</p>
-      <button type="button" name="button" v-on:click.once="add(1)">Add</button>
-      <button type="button" name="button" v-on:click="substract(1)">Substract</button>
-      <button type="button" name="button" @click="add(10)">Add 10</button>
-      <button type="button" name="button" @click="add(10)">Subtract 10</button><br>
-      <div id="canvas" @mousemove="updateXY">
-        {{ x }}, {{ y }}
-      </div>
-      <a @click.prevent="click" href="https://caddydz.github.io">Caddy DZ website</a>
+    <div id="vue-app">
+      <h1>Keyboard Events</h1>
+      <label>Name:</label>
+      <input type="text" v-on:keyup.enter="logName">
+      <label>Age:</label>
+      <input type="text" v-on:keyup.alt.enter="logAge">
     </div>
-    <script src="app.js" charset="utf-8"></script>    
+    <script src="app.js" charset="utf-8"></script>
   </body>
 </html>
