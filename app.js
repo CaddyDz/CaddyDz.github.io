@@ -1,15 +1,21 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: '',
-    age: ''
+    a: 0,
+    b: 0,
+    age: 20
   },
-  methods: {
-    logName: function() {
-      console.log("You entered your name");
+  // Computed properties are more efficient than methods
+  // They require returning a value
+  // They are unique in binding to their respective values
+  computed: {
+    addToA: function() {
+      console.log('addToA');
+      return this.a + this.age;
     },
-    logAge: function() {
-      console.log("You entered your age");
+    addToB: function() {
+      console.log('addToB');
+      return this.b + this.age;
     }
   }
 });
