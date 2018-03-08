@@ -8,11 +8,25 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Conditionals</h1>
-      <button v-on:click="error = !error">Toggle error</button>
-      <button v-on:click="success = !success">Toggle Success</button>
-      <p v-if="error" class="error">There has been an error</p>
-      <p v-else-if="success" class="success">Whoo, success :)</p>
+      <h1>Looping through lists</h1>
+      <ul>
+        <li v-for="character in characters">{{ character }}</li>
+      </ul>
+      <ul>
+        <li v-for="(ninja, index) in ninjas">
+          {{ index }} . {{ ninja.name }} - {{ ninja.age }}
+        </li>
+      </ul>
+      <div v-for="(ninja, index) in ninjas">
+        <h3>{{ index }} . {{ ninja.name }}</h3>
+        <p>Age - {{ ninja.age }}</p>
+      </div>
+      <template v-for="ninja in ninjas">
+        <div v-for="(val, key) in ninja">
+          <p>{{ key }} - {{ val }}</p>
+        </div>
+        <hr>
+      </template>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
