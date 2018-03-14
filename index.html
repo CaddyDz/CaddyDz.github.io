@@ -1,33 +1,39 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>VueJS Tutorials</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="vue.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div id="vue-app">
-      <h1>Looping through lists</h1>
-      <ul>
-        <li v-for="character in characters">{{ character }}</li>
-      </ul>
-      <ul>
-        <li v-for="(ninja, index) in ninjas">
-          {{ index }} . {{ ninja.name }} - {{ ninja.age }}
-        </li>
-      </ul>
-      <div v-for="(ninja, index) in ninjas">
-        <h3>{{ index }} . {{ ninja.name }}</h3>
-        <p>Age - {{ ninja.age }}</p>
-      </div>
-      <template v-for="ninja in ninjas">
-        <div v-for="(val, key) in ninja">
-          <p>{{ key }} - {{ val }}</p>
-        </div>
-        <hr>
-      </template>
-    </div>
-    <script src="app.js" charset="utf-8"></script>
-  </body>
-</html>
+<div id="app">
+  <ul>
+    <li v-for="product in products">
+      <input type="number" v-model.number="product.quantity">
+      {{ product.quantity }} {{ product.name }}
+      <span v-if="product.quantity === 0">
+        - OUT OF STOCK
+      </span>
+      <button @click="product.quantity += 1">
+        Add
+      </button>
+    </li>
+  </ul>
+  <h2>Total Inventory: {{ totalProducts }}</h2>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      products: []
+    },
+    computed: {
+      totalProducts () {
+        return this.products.reduce((sum, product) => {
+          return sum + product.quantity
+        }, 0)
+      }
+    },
+    created() {
+      fetch('https://api.myjson.com/bins/74l63')
+        .then(response => response.json())
+        .then(json => {
+          this.products = json.products
+        })
+    }
+  })
+</script>
