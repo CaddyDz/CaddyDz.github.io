@@ -1,39 +1,27 @@
-<div id="app">
-  <ul>
-    <li v-for="product in products">
-      <input type="number" v-model.number="product.quantity">
-      {{ product.quantity }} {{ product.name }}
-      <span v-if="product.quantity === 0">
-        - OUT OF STOCK
-      </span>
-      <button @click="product.quantity += 1">
-        Add
-      </button>
-    </li>
-  </ul>
-  <h2>Total Inventory: {{ totalProducts }}</h2>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- Bag Image -->
+      <div id="bag" :class="{burst:ended}"></div>
 
-<script src="https://unpkg.com/vue"></script>
-<script>
-  const app = new Vue({
-    el: '#app',
-    data: {
-      products: []
-    },
-    computed: {
-      totalProducts () {
-        return this.products.reduce((sum, product) => {
-          return sum + product.quantity
-        }, 0)
-      }
-    },
-    created() {
-      fetch('https://api.myjson.com/bins/74l63')
-        .then(response => response.json())
-        .then(json => {
-          this.products = json.products
-        })
-    }
-  })
-</script>
+      <!-- Bag Health -->
+      <div id="bag-health">
+        <div :style="{width:health + '%'}"></div>
+      </div>
+
+      <!-- Game Controls -->
+      <div id="controls">
+        <button @click="punch" :disabled="ended">Punch</button>
+        <button @click="restart">Restart</button>
+      </div>
+    </div>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
