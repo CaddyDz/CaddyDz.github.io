@@ -7,20 +7,15 @@
     <script src="vue.js" charset="utf-8"></script>
   </head>
   <body>
-    <div id="vue-app">
-      <!-- Bag Image -->
-      <div id="bag" :class="{burst:ended}"></div>
-
-      <!-- Bag Health -->
-      <div id="bag-health">
-        <div :style="{width:health + '%'}"></div>
-      </div>
-
-      <!-- Game Controls -->
-      <div id="controls">
-        <button @click="punch" :disabled="ended">Punch</button>
-        <button @click="restart">Restart</button>
-      </div>
+    <h1>Multiple Vue Instances</h1>
+    <div id="vue-app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+    </div>
+    <div id="vue-app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button @click="changeTitle">Change App One Title</button>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
