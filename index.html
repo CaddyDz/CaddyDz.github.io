@@ -7,15 +7,14 @@
     <script src="vue.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Multiple Vue Instances</h1>
+    <h1>Components</h1>
     <div id="vue-app-one">
-      <h2>{{ title }}</h2>
-      <p>{{ greet }}</p>
+      <h2>Vue app one</h2>
+      <greeting></greeting>
     </div>
     <div id="vue-app-two">
-      <h2>{{ title }}</h2>
-      <p>{{ greet }}</p>
-      <button @click="changeTitle">Change App One Title</button>
+      <h2>Vue app two</h2>
+      <greeting></greeting>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
