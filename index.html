@@ -7,14 +7,11 @@
     <script src="vue.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Components</h1>
-    <div id="vue-app-one">
-      <h2>Vue app one</h2>
-      <greeting></greeting>
-    </div>
-    <div id="vue-app-two">
-      <h2>Vue app two</h2>
-      <greeting></greeting>
+    <h1>Refs</h1>
+    <div id="app">
+      <input type="text" ref="input">
+      <button type="button" @click="readRefs">Submit</button>
+      <p>{{ output }}</p>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
