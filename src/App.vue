@@ -18,3 +18,8 @@ export default {
   }
 }
 </script>
+<style media="screen" scoped>
+h1 {
+  color: purple;
+}
+</style>
