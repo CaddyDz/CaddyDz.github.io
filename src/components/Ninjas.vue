@@ -27,6 +27,31 @@ export default {
     deleteNinja() {
       this.ninjas.pop();
     }
+  },
+  // LifeCycle Hooks
+  beforeCreate() {
+    //do something before creating vue instance
+    alert('Before Create');
+  },
+  created() {
+    //do something after creating vue instance
+    alert('Created');
+  },
+  beforeMount() {
+    //do something before mounting vue instance
+    alert('Before Mount');
+  },
+  mounted() {
+    //do something after mounting vue instance
+    alert('Mounted');
+  },
+  beforeUpdate() {
+    //do something before updating vue instance
+    alert('Before Update')
+  },
+  updated() {
+    //do something after updating vue instance
+    alert('Updated');
   }
 }
 </script>
