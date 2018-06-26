@@ -1,9 +1,17 @@
-function defaultDiscountRate() {
-	return .10;
+// REST operator
+function sum(...numbers) {
+	return numbers.reduce(
+		(prev, current) => prev + current
+	);
 }
 
-function applyDiscount(cost, discount = defaultDiscountRate()) {
-	return cost - (cost * discount);
+console.log(sum(1, 2, 3));
+
+// Spread operator 
+function sum(x,y) { // 1, 2
+	return x + y;
 }
 
-alert(applyDiscount(100));
+let nums = [1, 2];
+
+console.log(...nums);
