@@ -1,5 +1,9 @@
-let names = ['Taylor', 'Jeffrey', 'Adam', 'Matt'];
+function defaultDiscountRate() {
+	return .10;
+}
 
-names = names.map(name => `${name} is cool`);
+function applyDiscount(cost, discount = defaultDiscountRate()) {
+	return cost - (cost * discount);
+}
 
-console.log(names);
+alert(applyDiscount(100));
