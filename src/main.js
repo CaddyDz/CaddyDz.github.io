@@ -1,17 +1,9 @@
-// REST operator
-function sum(...numbers) {
-	return numbers.reduce(
-		(prev, current) => prev + current
-	);
-}
+let name = 'Bar';
 
-console.log(sum(1, 2, 3));
+let template = `
+	<div class="Alert">,
+		<p>${name}</p>,
+	</div>
+`.trim();
 
-// Spread operator 
-function sum(x,y) { // 1, 2
-	return x + y;
-}
-
-let nums = [1, 2];
-
-console.log(...nums);
+console.log(template);
