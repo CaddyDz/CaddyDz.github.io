@@ -1,5 +1,5 @@
-layout: sidebar
-style: light
+layout: stacked
+style: dark
 
 plugins:
   - jekyll-octicons
@@ -18,9 +18,9 @@ defaults:
 
 projects:
   sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
+  sort_by options:
+    - stars
+    - pushed
   limit: 9
   exclude:
     archived: false
@@ -28,31 +28,31 @@ projects:
     projects:
     # - repo-name
 
-# social_media:
+social_media:
+  stackoverflow: 5581565
+  twitter: saly3301
+  youtube: fJ2lOLzpoM7qj097VvdOWQ
   # behance: your_username
   # dribbble: your_username
-  # facebook: your_username
+  facebook: salim.djerbouh.9
   # hackerrank: your_username
-  # instagram: your_username
+  instagram: saly3301
   # keybase: your_username
-  # linkedin: your_username
+  linkedin: salim-djerbouh-01b630b1
   # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # twitter: your_username
+  medium: saly3301
+  telegram: caddydz
   # unsplash: your_username
   # vk: your_username
-  # website: http://your_website_url
-  # youtube: your_username
+  website: https://caddydz.herokuapp.com
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: Laravel
+    web_url: https://github.com/topics/laravel
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/laravel/laravel.png
 
-  - name: Web design
+  - name: Web Backend Development
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: Vue.js
+    web_url: https://github.com/topics/vuejs
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png
