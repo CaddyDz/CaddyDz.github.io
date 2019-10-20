@@ -23,8 +23,8 @@ projects:
     - pushed
   limit: 9
   exclude:
-    archived: false
-    forks: true
+    archived: true
+    forks: false
     projects:
     # - repo-name
 
